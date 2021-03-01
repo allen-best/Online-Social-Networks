@@ -5,9 +5,10 @@
 # To run from terminal window:   python3 youtube.py 
 
 from googleapiclient.discovery import build      # use build function to create a service object
+import os
 
 # put your API key into the API_KEY field below, in quotes
-API_KEY = "AIzaSyCJ9SGvnFERMk4uqxAOqqjQQzF5EzyGC_s"
+API_KEY = os.environ.get("GOOGLE_API_KEY")
 
 API_NAME = "youtube"
 API_VERSION = "v3"       # this should be the latest version
